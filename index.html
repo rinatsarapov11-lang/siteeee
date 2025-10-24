@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Традиционное индийское глинобитное строительство</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f5dc 0%, #d2b48c 100%);
+            color: #5d4037;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #8b4513 0%, #a0522d 100%);
+            color: #fff;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                       url('https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-weight: bold;
+        }
+        
+        .btn:hover {
+            background: #e55a2b;
+        }
+        
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #8b4513;
+        }
+        
+        /* Features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 3rem;
+        }
+        
+        .gallery-item {
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Steps */
+        .steps-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 3rem;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .step-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ff6b35;
+            margin-right: 2rem;
+            min-width: 60px;
+        }
+        
+        /* Footer */
+        footer {
+            background: #8b4513;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 4rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">🌿 Глиняные Дома</div>
+                <ul class="nav-links">
+                    <li><a href="#about">О технологии</a></li>
+                    <li><a href="#advantages">Преимущества</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#steps">Этапы строительства</a></li>
+                    <li><a href="#materials">Материалы</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Традиционные индийские дома из глины</h1>
+            <p>Мудрость веков в современном строительстве</p>
+            <a href="#about" class="btn">Узнать больше</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">О технологии</h2>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                    Глинобитное строительство — это древняя технология, широко распространенная в Индии 
+                    и других странах с жарким климатом. Эти дома идеально адаптированы к местным условиям 
+                    и демонстрируют удивительную гармонию человека с природой.
+                </p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🌡️</div>
+                        <h3>Естественная терморегуляция</h3>
+                        <p>Глиняные стены поддерживают комфортную температуру в любое время года</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💨</div>
+                        <h3>Экологичность</h3>
+                        <p>100% натуральные материалы, безопасные для здоровья и окружающей среды</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3>Экономичность</h3>
+                        <p>Низкая стоимость материалов и простота строительства</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="section" style="background: #f8f4e9;">
+        <div class="container">
+            <h2 class="section-title">Преимущества глиняных домов</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Энергоэффективность</h3>
+                    <p>Снижение расходов на кондиционирование до 40%</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Долговечность</h3>
+                    <p>Правильно построенные глиняные дома служат десятилетиями</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Здоровый микроклимат</h3>
+                    <p>Глина регулирует влажность и поглощает токсины</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Огнестойкость</h3>
+                    <p>Глиняные стены не поддерживают горение</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2 class="section-title">Галерея построек</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27a3d74a6882?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                <div class="gallery-item" style="background-image: url('https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Construction Steps -->
+    <section id="steps" class="section" style="background: #f8f4e9;">
+        <div class="container">
+            <h2 class="section-title">Этапы строительства</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>Подготовка участка и фундамента</h3>
+                        <p>Выравнивание площадки и создание каменного или глиняного фундамента</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>Замес глиняной смеси</h3>
+                        <p>Глина смешивается с песком, соломой и водой до однородной консистенции</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>Возведение стен</h3>
+                        <p>Формирование стен методом набивки в опалубку или ручной лепки</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h3>Сушка и отделка</h3>
+                        <p>Естественная сушка в течение нескольких недель и финишная штукатурка</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Section -->
+    <section id="materials" class="section">
+        <div class="container">
+            <h2 class="section-title">Используемые материалы</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Глина</h3>
+                    <p>Основной строительный материал, обеспечивающий прочность</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Песок</h3>
+                    <p>Добавляется для уменьшения усадки и увеличения прочности</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Солома</h3>
+                    <p>Натуральное армирование, предотвращающее трещины</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Навоз</h3>
+                    <p>Традиционная добавка для улучшения пластичности</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Традиционное индийское глинобитное строительство</p>
+            <p>Мудрость предков для будущих поколений</p>
+        </div>
+    </footer>
+
+    <script>
+        src="script.js"
+        // Плавная прокрутка для навигации
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Анимация появления элементов при скролле
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Применяем анимацию к карточкам
+        document.querySelectorAll('.feature-card, .step, .gallery-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+        
+    </script>
+</body>
+</html>
