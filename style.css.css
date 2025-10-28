@@ -69,7 +69,7 @@ nav {
 /* Hero Section */
 .hero {
     background: linear-gradient(rgba(139, 69, 19, 0.7), rgba(160, 82, 45, 0.7)), 
-                url('https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80');
+                <img src="img/img1.jpg" "alt=Пример дома из глины" width="600" heihgt="400">;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -522,4 +522,5 @@ footer p {
 
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(45deg, #a0522d, #8b4513);
+
 }
